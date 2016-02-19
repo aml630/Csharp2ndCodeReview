@@ -1,5 +1,5 @@
 using Xunit;
-using WordCountNS.Objects;
+using RepeatCounterNS.Objects;
 using System.Collections.Generic;
 using System;
 
@@ -10,42 +10,37 @@ namespace WordCountTestNS
     [Fact]
     public void Check_Single_Character()
     {
-      WordCounter test = new WordCounter("a", "a");
-      Assert.Equal(1, test.RepeatCounter());
+      Assert.Equal(1, RepeatCounter.CountRepeats("a", "a"));
     }
 
     [Fact]
     public void Check_Single_Character_Against_Longer_Phrase()
     {
-      WordCounter test = new WordCounter("a", "a cat");
-      Assert.Equal(1, test.RepeatCounter());
+      Assert.Equal(1, RepeatCounter.CountRepeats("a", "a cat"));
     }
 
     [Fact]
     public void Check_Word_Against_Single_Character_Phrase()
     {
-      WordCounter test = new WordCounter("cat", "a");
-      Assert.Equal(0, test.RepeatCounter());
+      Assert.Equal(0, RepeatCounter.CountRepeats("cat", "a"));
     }
 
     [Fact]
     public void Check_Word_Against_Single_Word_Phrase()
     {
-      WordCounter test = new WordCounter("cat", "cat");
-      Assert.Equal(1, test.RepeatCounter());
+      Assert.Equal(1, RepeatCounter.CountRepeats("cat", "cat"));
     }
     [Fact]
     public void Check_Word_Capitalized_Against_Single_Word_Phrase()
     {
-      WordCounter test = new WordCounter("Cat", "cat");
-      Assert.Equal(1, test.RepeatCounter());
+      Assert.Equal(1, RepeatCounter.CountRepeats("Cat", "cat"));
     }
 
     [Fact]
     public void Check_Word_Capitalized_Against_Phrase_With_Many_Capitals()
     {
-      WordCounter test = new WordCounter("Cat", "cat Cat CAT");
-      Assert.Equal(3, test.RepeatCounter());
+
+      Assert.Equal(3, RepeatCounter.CountRepeats("Cat", "cat Cat CAT"));
     }
   }
 }

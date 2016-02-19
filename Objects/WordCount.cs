@@ -2,21 +2,14 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 
-namespace WordCountNS.Objects
+namespace RepeatCounterNS.Objects
 {
-  public class WordCounter
+  public class RepeatCounter
     {
 
-      private string _singleWord;
-      private string _phrase;
 
-        public WordCounter (string singleWord, string phrase)
-        {
-          _singleWord = singleWord;
-          _phrase = phrase;
-        }
 
-        public int RepeatCounter ()
+        public static int CountRepeats (string _singleWord, string _phrase)
         {
           int times = 0;
           string LowerPhrase = _phrase.ToLower();
