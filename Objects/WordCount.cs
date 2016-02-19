@@ -19,10 +19,12 @@ namespace WordCountNS.Objects
         public int RepeatCounter ()
         {
           int times = 0;
-          List<string> phraseSplit = _phrase.Split(' ').ToList();
+          string LowerPhrase = _phrase.ToLower();
+          string LowerWord = _singleWord.ToLower();
+          List<string> phraseSplit = LowerPhrase.Split(' ').ToList();
           for(var i = 0; i < phraseSplit.Count; i++)
           {
-            if (_singleWord == phraseSplit[i])
+            if (LowerWord == phraseSplit[i])
             {
               times +=1;
             }
