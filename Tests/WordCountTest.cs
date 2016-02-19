@@ -8,14 +8,11 @@ namespace WordCountTestNS
   public class WordCount
   {
     [Fact]
-    public void Check_Double_Word()
+    public void Check_Single_Character()
     {
-      Assert.Equal(2, WordCounter.RepeatCounter("hey", "hey hey"));
+      WordCounter test = new WordCounter("a", "a");
+      Assert.Equal(1, test.RepeatCounter());
     }
-    [Fact]
-    public void Check_Single_Word()
-    {
-      Assert.Equal(1, WordCounter.RepeatCounter("hey", "hey"));
-    }
+
   }
 }

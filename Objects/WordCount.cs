@@ -7,20 +7,22 @@ namespace WordCountNS.Objects
   public class WordCounter
     {
 
+      private string _singleWord;
+      private string _phrase;
 
-        public WordCounter ()
+        public WordCounter (string singleWord, string phrase)
         {
-
+          _singleWord = singleWord;
+          _phrase = phrase;
         }
 
-        public static int RepeatCounter (string singleWord, string phrase)
+        public int RepeatCounter ()
         {
-          string inputWord = singleWord;
           int times = 0;
-          List<string> phraseSplit = phrase.Split(' ').ToList();
+          List<string> phraseSplit = _phrase.Split(' ').ToList();
           for(var i = 0; i < phraseSplit.Count; i++)
           {
-            if (inputWord == phraseSplit[i])
+            if (_singleWord == phraseSplit[i])
             {
               times +=1;
             }
