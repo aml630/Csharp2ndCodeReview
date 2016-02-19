@@ -29,8 +29,7 @@ namespace WordCountNS.Objects
               times +=1;
             }
           }
-
           return times;
-        }
-   }
+         }
+    }
 }
