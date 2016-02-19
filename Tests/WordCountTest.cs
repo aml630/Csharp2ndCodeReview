@@ -30,6 +30,7 @@ namespace WordCountTestNS
     {
       Assert.Equal(1, RepeatCounter.CountRepeats("cat", "cat"));
     }
+
     [Fact]
     public void Check_Word_Capitalized_Against_Single_Word_Phrase()
     {

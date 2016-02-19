@@ -12,13 +12,10 @@ namespace RepeatCounterModuleNS
       {
         return View["index.cshtml"];
       };
-
       Post["/outputs"] = _ =>
       {
-
         return View ["outputs.cshtml", RepeatCounter.CountRepeats(Request.Form["word"], Request.Form["phrase"])];
       };
-
     }
   }
 }
