@@ -12,13 +12,13 @@ namespace WordCounterMNS
       {
         return View["index.cshtml"];
       };
-
-      Post["/updatePage"] = _ =>
-      {
-        string input = Request.Form["inputWord"];
-        List<string> output = Word.CompareWord(input);
-        return View ["matchedWords.cshtml", output];
-      };
+      // 
+      // Post["/updatePage"] = _ =>
+      // {
+      //   string input = Request.Form["inputWord"];
+      //   List<string> output = Word.CompareWord(input);
+      //   return View ["matchedWords.cshtml", output];
+      // };
 
     }
   }
