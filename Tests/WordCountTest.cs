@@ -40,5 +40,12 @@ namespace WordCountTestNS
       WordCounter test = new WordCounter("Cat", "cat");
       Assert.Equal(1, test.RepeatCounter());
     }
+
+    [Fact]
+    public void Check_Word_Capitalized_Against_Phrase_With_Many_Capitals()
+    {
+      WordCounter test = new WordCounter("Cat", "cat Cat CAT");
+      Assert.Equal(3, test.RepeatCounter());
+    }
   }
 }
