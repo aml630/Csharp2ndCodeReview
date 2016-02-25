@@ -1,4 +1,4 @@
-1.  Input("a", "a") Output(1):  I've chosen this as my first test because it can be tested easily without needign to worry about full multi character strings.
+1.  Input("a", "a") Output(1):  I've chosen this as my first test because it can be tested easily without needing to worry about full multi character strings.
 
 2.  Input("a", "a cat") Output(1):  This test remains simple but will check to make sure that my function is not simply spitting out the number of words in my test phrase.  It should only be matching when the string matches.
 
@@ -10,4 +10,8 @@
 
 6.  Input("cat", "Cat")Output(1):  This will test to make sure my function can correctly match with capitalizations in the output.
 
-6. Input("cat", "CAT, cat, Cat"):  This will test multiple capitalization requirements as well as making sure my function can connect multiple strings.
+7. Input("cat", "CAT, cat, Cat")Output(3):  This will test multiple capitalization requirements as well as making sure my function can connect multiple strings.
+
+8. Input("cat", "catsville, cat, catatonic")Output(1):  This will test make sure partial matches are not counted when the function is run.
+
+8. Input("cat", "catsville, ca , catcatcat, cat")Output(1):  This will test make sure the whole input is being tested for on not just part of it.  

@@ -43,5 +43,19 @@ namespace WordCountTestNS
 
       Assert.Equal(3, RepeatCounter.CountRepeats("Cat", "cat Cat CAT"));
     }
+
+    [Fact]
+    public void Check_Word_For_Partial_Phrase_Matches()
+    {
+
+      Assert.Equal(1, RepeatCounter.CountRepeats("Cat", "catzville cat catatonic"));
+    }
+
+    [Fact]
+    public void Check_Phrase_For_Partial_Word_Matches()
+    {
+
+      Assert.Equal(1, RepeatCounter.CountRepeats("Cat", "catzville ca catcatcat cat"));
+    }
   }
 }
